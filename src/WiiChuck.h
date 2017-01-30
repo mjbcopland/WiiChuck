@@ -9,9 +9,9 @@ private:
   // See http://wiibrew.org/wiki/Wiimote/Extension_Controllers/Nunchuck#Data_Format
   static uint8_t data[6];
 
-  class NunchuckButton : public BaseButton {
+  class WiiChuckButton : public BaseButton {
   public:
-    NunchuckButton(const uint8_t mask)
+    WiiChuckButton(const uint8_t mask)
         : BaseButton(0), mask(mask) {}
 
     inline bool read() const {return !(WiiChuck::data[5] & mask);}
@@ -33,7 +33,7 @@ public:
   static inline uint16_t accelY() {return (data[3] << 2) | ((data[5] >> 4) & 0x03);}
   static inline uint16_t accelZ() {return (data[4] << 2) | ((data[5] >> 6) & 0x03);}
 
-  static NunchuckButton cButton, zButton;
+  static WiiChuckButton cButton, zButton;
 };
 
-extern WiiChuck Nunchuck;
+extern WiiChuck Nunchuk;
