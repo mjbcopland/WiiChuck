@@ -11,8 +11,7 @@ private:
 
   class WiiChuckButton : public BaseButton {
   public:
-    WiiChuckButton(const uint8_t mask)
-        : BaseButton(0), mask(mask) {}
+    WiiChuckButton(const uint8_t mask) : BaseButton(0), mask(mask) {}
 
     inline bool read() const {return !(WiiChuck::data[5] & mask);}
 
