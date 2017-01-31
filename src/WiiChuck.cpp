@@ -41,8 +41,8 @@ void WiiChuck::update() {
 
 // initialise static WiiChuck members
 uint8_t WiiChuck::data[6];
-WiiChuck::NunchuckButton WiiChuck::cButton(0x02);
-WiiChuck::NunchuckButton WiiChuck::zButton(0x01);
+WiiChuck::WiiChuckButton WiiChuck::cButton(0x02);
+WiiChuck::WiiChuckButton WiiChuck::zButton(0x01);
 
 // initialise WiiChuck object
-WiiChuck Nunchuck;
+WiiChuck Nunchuk;
